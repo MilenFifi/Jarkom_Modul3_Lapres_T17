@@ -12,7 +12,7 @@ uml_switch -unix switch2 > /dev/null < /dev/null &
 uml_switch -unix switch3 > /dev/null < /dev/null &
 
 # Router
-xterm -T SURABAYA -e linux ubd0=SURABAYA,jarkom umid=SURABAYA eth0=tuntap,,,'ip_tuntap_tiap_kelompok' eth1=daemon,,,switch1 eth2=daemon,,,switch3 eth3=daemon,,,switch2 mem=256M &
+xterm -T SURABAYA -e linux ubd0=SURABAYA,jarkom umid=SURABAYA eth0=tuntap,,,10.151.70.57 eth1=daemon,,,switch1 eth2=daemon,,,switch3 eth3=daemon,,,switch2 mem=256M &
 
 # Server
 xterm -T MOJOKERTO -e linux ubd0=MOJOKERTO,jarkom umid=MOJOKERTO eth0=daemon,,,switch2 mem=128M &
@@ -223,7 +223,7 @@ Untuk soal ini ``default-lease-time`` diedit dengan satuan detik.
 
 ## Soal 7
 
-- Pertama kita download dulu squid dengan command apt-get install squid dan juga apache2-utils dengan command apt-get install apache2-utils. Lalu dibuat konfigurasi username dan password dengan command htpasswd -c /etc/squid/passwd userta_t03. Lalu nanti akan diminta password dan diinputkan dengan inipassw0rdta_t03.
+- Pertama kita download dulu squid dengan command apt-get install squid dan juga apache2-utils dengan command apt-get install apache2-utils. Lalu dibuat konfigurasi username dan password dengan command htpasswd -c /etc/squid/passwd userta_t17. Lalu nanti akan diminta password dan diinputkan dengan inipassw0rdta_t17.
 
 - Selanjutnya kita setting /etc/squid/squid.conf agar memiliki konfigurasi sebagai berikut : 
 
